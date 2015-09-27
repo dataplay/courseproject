@@ -55,13 +55,13 @@ library(dplyr)
 STEP 7. Select from testing data set only variables that are means or standard deviations of measurements from the list of variables in the original testing dataset. 
 
 xtest_subset86 <- select(xtest_subset1, contains("Mean"), contains("mean"), contains("std"))
-## Combining files to create the testing data set
+NOTE: Combining files to create the testing data set
 testdata86 <- cbind(testsub, ytest, xtest_subset86)
 
 STEP 8.  Select from training data set only variables that are means or standard deviations of measurements from the list of variables in the original training dataset. 
 
 xtrain_subset86 <- select(xtrain_subset1, contains("Mean"), contains("mean"), contains("std"))
-## Combining files to create the training data set
+NOTE: Combining files to create the training data set
 traindata86 <- cbind(trainsub, ytrain, xtrain_subset86)
 
 STEP 9. Merge testing and training data together into mergedata86
